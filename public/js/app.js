@@ -11,7 +11,7 @@ const messageTwo = document.querySelector('#message-2')
      //console.log(location)
     messageOne.textContent = 'Loading...'
     messageTwo.textContent = ''
-     let url = 'http://localhost:3000/weather?address=' + encodeURIComponent(location)
+     let url = '/weather?address=' + encodeURIComponent(location)
      fetch(url).then((response) => {
         response.json().then((data) => {
             if (data.error) {
