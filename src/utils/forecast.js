@@ -9,10 +9,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find weather', undefined)
         } else {
             callback(undefined, {
-                temperature: body.current.temperature,
-                humidity: body.current.humidity,
-                pressure: body.current.pressure,
-                location: body.location.name
+                forecastData: `The temperature is ${body.current.temperature}\u00B0C but it feels like ${body.current.feelslike}\u00B0C, humidity is ${body.current.humidity} and the pressure is ${body.current.pressure}bars. The weather is ${body.current.weather_descriptions}, cloud cover is ${body.current.cloudcover}% and the precipitation is ${body.current.precip}. The wind speed is ${body.current.wind_speed} and wind direction is ${body.current.wind_dir}`
             })
         }
     })

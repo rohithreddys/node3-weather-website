@@ -21,8 +21,8 @@ const messageTwo = document.querySelector('#message-2')
             } else {
             //    console.log(data.location)
             //    console.log(data.temperature)
-               messageOne.textContent = data.location
-               messageTwo.textContent = `The temperature is ${data.temperature}\u00B0C, pressure is ${data.pressure}bar and the humidity is ${data.humidity}`
+               messageOne.textContent = data.address
+               messageTwo.textContent = data.weather
             }
         })
     })
